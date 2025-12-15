@@ -23,6 +23,10 @@ jobs:
         python -m pip install --upgrade pip
         pip install -r requirements.txt
 
+    - name: Run flake8 (code quality & security check)
+      run: |
+        flake8 app/
+
     - name: Run tests
       run: |
         pytest
