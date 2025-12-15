@@ -13,3 +13,10 @@ git add README.md
 git commit -m "Анхны README файлыг нэмэв"
 # Өөрчлөлтүүдээ GitHub руу "push" хийх (илгээх)
 git push origin main
+
+Definition of Done:
+- Код бичигдсэн
+- Код алдаагүй ажиллаж байна
+- Нэгжийн тест бичигдсэн
+- Бүх тест амжилттай давсан
+- Код GitHub руу commit хийгдсэн
