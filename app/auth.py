@@ -26,6 +26,7 @@ def is_valid_login(username, password):
 def register_user(username, password):
     """
     Validate registration input data.
+    Password must be at least 6 characters long.
     """
     if username is None or password is None:
         logging.error("Registration input is None")
@@ -37,6 +38,10 @@ def register_user(username, password):
 
     if not username or not password:
         logging.warning("Empty registration input")
+        return False
+
+    if len(password) < 6:
+        logging.warning("Password too short")
         return False
 
     logging.info("Registration input validated successfully")

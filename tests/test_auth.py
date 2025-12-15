@@ -26,7 +26,6 @@ def test_login_invalid_type():
     with pytest.raises(TypeError):
         is_valid_login(123, "pass")
 
-
 def test_register_invalid_type():
     with pytest.raises(TypeError):
         register_user("user", 123)
@@ -34,3 +33,9 @@ def test_register_invalid_type():
 
 def test_login_empty_string():
     assert is_valid_login("", "") is False
+
+def test_register_password_too_short():
+    assert register_user("user", "123") is False
+
+def test_register_password_valid_length():
+    assert register_user("user", "123456") is True
