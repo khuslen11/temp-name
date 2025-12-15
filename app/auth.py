@@ -1,17 +1,18 @@
 def is_valid_login(username, password):
     """
-    Returns True if both username and password are not empty.
-    Otherwise returns False.
+    Check whether both username and password are provided.
+
+    Returns:
+        bool: True if both values are non-empty, otherwise False.
     """
-    if not username or not password:
-        return False
-    return True
+    return bool(username and password)
+
 
 def register_user(username, password):
     """
-    Returns True if registration data is valid.
-    Returns False if username or password is empty.
+    Validate user registration input.
+
+    Returns:
+        bool: True if registration data is valid, otherwise False.
     """
-    if not username or not password:
-        return False
-    return True
+    return bool(username and password)
