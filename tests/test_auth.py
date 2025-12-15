@@ -1,3 +1,5 @@
+import pytest
+from app.auth import is_valid_login, register_user
 from app.auth import is_valid_login
 
 def test_valid_login():
@@ -19,3 +21,16 @@ def test_register_success():
 
 def test_register_fail_empty():
     assert register_user("", "") is False
+
+def test_login_invalid_type():
+    with pytest.raises(TypeError):
+        is_valid_login(123, "pass")
+
+
+def test_register_invalid_type():
+    with pytest.raises(TypeError):
+        register_user("user", 123)
+
+
+def test_login_empty_string():
+    assert is_valid_login("", "") is False
