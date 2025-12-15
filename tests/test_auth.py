@@ -11,3 +11,11 @@ def test_invalid_login_empty_username():
 
 def test_invalid_login_empty_password():
     assert is_valid_login("user", "") is False
+
+from app.auth import register_user
+
+def test_register_success():
+    assert register_user("newuser", "password123") is True
+
+def test_register_fail_empty():
+    assert register_user("", "") is False

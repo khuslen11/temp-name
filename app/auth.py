@@ -6,3 +6,12 @@ def is_valid_login(username, password):
     if not username or not password:
         return False
     return True
+
+def register_user(username, password):
+    """
+    Returns True if registration data is valid.
+    Returns False if username or password is empty.
+    """
+    if not username or not password:
+        return False
+    return True
