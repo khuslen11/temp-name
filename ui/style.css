@@ -1,0 +1,169 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: linear-gradient(135deg, #74b9ff, #a29bfe);
+}
+
+.page {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    background: #ffffff;
+    width: 100%;
+    max-width: 420px;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+h1 {
+    margin: 0;
+    text-align: center;
+}
+
+.subtitle {
+    text-align: center;
+    color: #777;
+    margin-bottom: 20px;
+    font-size: 14px;
+}
+
+.tabs {
+    display: flex;
+    margin-bottom: 20px;
+    background: #f1f2f6;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.tab {
+    flex: 1;
+    text-align: center;
+    padding: 10px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: background 0.2s;
+}
+
+.tab.active {
+    background: #0984e3;
+    color: white;
+}
+
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    font-size: 14px;
+    margin-bottom: 5px;
+    display: block;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
+input:focus {
+    outline: none;
+    border-color: #0984e3;
+}
+
+.primary-btn {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 6px;
+    background: #0984e3;
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+    margin-top: 5px;
+}
+
+.secondary-btn {
+    margin-top: 15px;
+    background: #dfe6e9;
+    border: none;
+    padding: 8px 14px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.primary-btn:hover {
+    background: #74b9ff;
+}
+
+.message {
+    display: none;
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+.success {
+    background: #dff9e2;
+    color: #1b5e20;
+}
+
+.error {
+    background: #ffe6e6;
+    color: #b71c1c;
+}
+
+.status-box {
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+.logged-in {
+    color: #2ecc71;
+}
+
+.logged-out {
+    color: #e74c3c;
+}
+
+.card {
+    margin-top: 15px;
+    background: #f8f9fa;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+th, td {
+    padding: 6px;
+    border-bottom: 1px solid #ddd;
+    text-align: left;
+}
+
+th {
+    background: #f1f2f6;
+}

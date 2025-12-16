@@ -5,7 +5,7 @@ from app.provider import (
     search_providers_by_location
 )
 
-# US-03
+
 def test_get_providers_returns_list():
     providers = get_providers()
     assert isinstance(providers, list)
@@ -18,7 +18,7 @@ def test_provider_structure():
     assert "service" in provider
     assert "location" in provider
 
-# US-04
+
 def test_get_provider_profile_found():
     provider = get_provider_profile(1)
     assert provider is not None
@@ -31,7 +31,7 @@ def test_get_provider_profile_invalid_type():
     with pytest.raises(TypeError):
         get_provider_profile("1")
 
-# US-12
+
 def test_search_providers_by_location_found():
     results = search_providers_by_location("Ulaanbaatar")
     assert len(results) >= 1

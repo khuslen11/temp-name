@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="mn">
+<head>
+    <meta charset="UTF-8">
+    <title>Нэвтрэх Систем</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="page">
+    <div class="container">
+        <h1>Нэвтрэх Систем</h1>
+        <p class="subtitle">Plumbing / Electrician Service Platform</p>
+
+        <div class="tabs">
+            <div class="tab active" data-tab="login">Нэвтрэх</div>
+            <div class="tab" data-tab="register">Бүртгүүлэх</div>
+        </div>
+
+        <!-- LOGIN -->
+        <div id="login" class="tab-content active">
+            <div class="form-group">
+                <label>Хэрэглэгчийн нэр</label>
+                <input id="login-username" placeholder="username">
+            </div>
+
+            <div class="form-group">
+                <label>Нууц үг</label>
+                <input type="password" id="login-password" placeholder="******">
+            </div>
+
+            <button class="primary-btn" onclick="login()">Нэвтрэх</button>
+            <div id="login-msg" class="message"></div>
+        </div>
+
+        <!-- REGISTER -->
+        <div id="register" class="tab-content">
+            <div class="form-group">
+                <label>Хэрэглэгчийн нэр</label>
+                <input id="reg-username">
+            </div>
+
+            <div class="form-group">
+                <label>Имэйл</label>
+                <input id="reg-email">
+            </div>
+
+            <div class="form-group">
+                <label>Нууц үг</label>
+                <input type="password" id="reg-password">
+            </div>
+
+            <button class="primary-btn" onclick="register()">Бүртгүүлэх</button>
+            <div id="register-msg" class="message"></div>
+        </div>
+
+        <!-- USER INFO -->
+        <div class="user-info">
+            <div class="status-box">
+                Статус:
+                <span id="status" class="logged-out">Нэвтрээгүй</span>
+            </div>
+
+            <div id="user-details" class="card" style="display:none;">
+                <p><strong>Хэрэглэгч:</strong> <span id="info-username"></span></p>
+
+                <h3>Нэвтрэх түүх (сүүлийн 5)</h3>
+                <table>
+                    <thead>
+                    <tr>
+                        <th>Огноо</th>
+                        <th>Нэр</th>
+                        <th>Төлөв</th>
+                    </tr>
+                    </thead>
+                    <tbody id="history"></tbody>
+                </table>
+
+                <button class="secondary-btn" onclick="logout()">Гарах</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
